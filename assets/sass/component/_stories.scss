@@ -1,0 +1,59 @@
+.story{
+    background-color: $color-white-opc;
+    width: 75%;
+    margin: 0 auto;
+    padding: 3.125rem;
+    cursor: pointer;
+    transform: skewX(-12deg);
+    @media all and (max-width: 576px){
+        text-align: center;
+        transform: skewX(0deg);
+    }
+    > *{
+        transform: skewX(12deg);
+        @media all and (max-width: 576px){
+            transform: skewX(0deg); 
+        }
+    }
+    &-shape{
+        width: 12.5rem;
+        height: 12.5rem;
+        float: left;
+        margin: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        shape-outside: circle(50% at 50% 50%);
+        margin-right: 2.188rem;
+        @media all and (max-width: 576px){
+            float: none;
+            margin: 0 auto;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            transform: scale(1.4);
+            transition: all .3s ease-in-out;
+        }
+        &-caption{
+            position: absolute;
+            top: 111%;
+            left: 50%;
+            color: $color-white;
+            text-transform: uppercase;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            text-align: center;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &:hover &-shape img{
+        transform: scale(1);
+        filter: blur(3px) brightness(0.8);
+    }
+    &:hover &-shape &-shape-caption{
+        top: 50%;
+        opacity: 1;
+    }
+    
+}

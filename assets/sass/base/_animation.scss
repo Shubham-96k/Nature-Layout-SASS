@@ -1,0 +1,36 @@
+
+@keyframes bganimation{
+    0%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+    
+}
+@keyframes lefttoright{
+    0%{
+        transform: translateX(-6.25rem);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(1.875rem);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes righttoleft{
+    0%{
+        transform: translateX(6.25rem);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(-1.875rem);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

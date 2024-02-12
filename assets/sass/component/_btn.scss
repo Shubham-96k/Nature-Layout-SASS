@@ -1,0 +1,86 @@
+.btn{
+    &,
+    &:link,
+    &:visited{
+         display: inline-block;
+         text-transform: uppercase;
+         cursor: pointer;
+         text-decoration: none;
+         font-size: 1rem;
+         border: 0px;
+         font-weight: 500;
+         padding: 0.8rem 3.5rem;
+         border-radius: 1.7rem; 
+         position: relative;
+         z-index: 1;
+         transition: all .3s ease-in-out;
+    }
+     &-white{
+          background-color: $color-white;
+          color: $color-grey-dark1;
+     }
+     &-green{
+          background-color: $color-primary-dark;
+          color: $color-white;
+     }
+     &::before{
+          content: " ";
+          position: absolute;
+          background-color: inherit;
+          top: 0;
+          left: 0;
+          border-radius: 1.7rem;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+          transition: all .3s ease-in-out;
+     }
+     @media all and (max-width: 576px){
+          &:active{
+               transform: scale(.7);
+          }
+     }
+     @media all and (min-width: 576px){
+          &:active{
+               transform: scale(.7);
+          }
+     }
+     @media all and (min-width: 992px){
+          &:hover,
+          &:focus{
+          transform: translateY(-0.6rem);
+          @include boxshadow;
+               &::before{
+                    transform: scale(1.5);
+                    opacity: 0;
+               }
+          }
+          &:active{
+               transform: translate(-0.5rem);
+               transform: scale(1);
+               box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.4);
+          }
+     }
+     &-text,
+     &-text:link,
+     &-text:visited{
+          text-decoration: none;
+          text-transform: capitalize;
+          color: $color-primary-dark;
+          display: inline-block;
+          border-bottom: 1px solid;
+          padding: 5px;
+          transition: all .3s ease-in-out;
+          &:hover,&:focus,&:active{
+               background-color: $color-primary-dark;
+               color: $color-white;
+               transform: translateY(-5px);
+               @include boxshadow;
+               span{
+                    transform: translateX(3px);
+                    display: inline-block;
+               }
+          }
+          
+     }
+ }

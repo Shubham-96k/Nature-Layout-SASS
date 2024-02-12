@@ -1,0 +1,29 @@
+.explore-feature{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, $color-primary-dark-opc, $color-primary-light-opc), url("../images/nat-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transform: skewY(-7deg);
+    overflow: hidden;
+    margin-top: -9.5rem;
+    @include atCenter;
+    > *{
+        transform: skewY(7deg);
+    }
+}
+
+.tour-card {
+    padding: 17.375rem 0px 9.375rem;
+    background-color: #eee;
+    margin-top: -9.375rem;
+}
+
+.stories{
+    padding: 9.375rem 0;
+}
+
+.book-section{ 
+    padding: 9.375rem 0;
+    @include lg(to right bottom, $color-primary-light, $color-primary-dark)
+}

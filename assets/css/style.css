@@ -109,7 +109,6 @@ a:visited {
   padding: 0.8rem 3.5rem;
   border-radius: 1.7rem;
   position: relative;
-  z-index: 1;
   transition: all .3s ease-in-out; }
 
 .btn-white {

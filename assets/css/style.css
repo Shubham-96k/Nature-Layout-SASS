@@ -566,9 +566,9 @@ a:visited {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px; }
-  .navigation-item:hover {
+  .navigation-item:hover, .navigation-item:focus, .navigation-item:active {
     background-position: 100%; }
-    .navigation-item:hover a {
+    .navigation-item:hover a, .navigation-item:focus a, .navigation-item:active a {
       color: #55c57a; }
 
 .navigation.active .navigation-icon {

@@ -78,7 +78,7 @@
             font-weight: bold;
             letter-spacing: 2px;
         }
-        &:hover{
+        &:hover,&:focus,&:active{ 
             background-position: 100%;
             a{
                 color: $color-primary;

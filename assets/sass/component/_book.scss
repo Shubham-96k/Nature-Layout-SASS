@@ -2,13 +2,12 @@
     background-image: linear-gradient(106deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/nat-10.jpg);
     @media all and (max-width: 576px){
         background-image: linear-gradient(106deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%), url(../images/nat-10.jpg);
-        text-align: center;
     }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     &-form{
-        padding: 3.75rem 2.5rem;
+        padding: 3.75rem 3.5rem;
     }
 }
 .form{
@@ -18,10 +17,7 @@
         outline: none;
         padding: 1rem 1.25rem;
         font-size: 1rem;
-        width: 90%;
-        @media all and (max-width: 576px){
-            width: 100%;
-        }
+        width: 100%;
         border-radius: 3px;
         color: inherit;
         &:focus{
@@ -48,4 +44,57 @@
             opacity: 1;
         }
     } 
+    &-radio-group{
+        @media all and (min-width: 1140px){
+            @include between; 
+        }
+        margin-bottom: 2rem;
+        label{
+            position: relative;
+            @media all and (max-width:576px){
+                padding-left: 25px;
+            }
+            @media all and (min-width:576px){
+                padding-left: 25px;
+            }
+            @media all and(min-width: 768px){
+                padding-left: 40px;
+            }
+        }
+    }
+    &-custom-radio {
+        border: 4px solid $color-primary;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        &::after{
+            content: "";
+            height: 1rem;
+            width: 1rem;
+            background-color: $color-primary;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+    }
+    &-radio-control{
+        display: none;
+    }
+    &-radio-control:checked ~ label > &-custom-radio::after{
+        opacity: 1;
+    }
+    & .btn-green{
+        @media all and (min-width:768px){
+            padding: 0.8rem 1.5rem
+        }
+        @media all and (min-width:992px){
+            padding: 0.8rem 3.5rem
+        }
+    }
 }

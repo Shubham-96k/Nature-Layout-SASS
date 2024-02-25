@@ -1,0 +1,124 @@
+
+.navigation{
+    &-toggle{
+        position: fixed;
+        height: 4.375rem;
+        width: 4.375rem;
+        background-color: $color-white;
+        top: 3.5rem;
+        right: 3.5rem;
+        z-index: 2;
+        border-radius: 50%;
+        text-align: center;
+        @include boxshadow;
+    }
+
+    &-icon{
+        height: 2px;
+        width: 35px;
+        display: inline-block;
+        background-color: $color-dark;
+        margin-top: calc(4.375rem/1/2 - 1px);
+        position: relative;
+        &::after,&::before{
+            content: '';
+            height: 2px;
+            width: 35px;
+            display: inline-block;
+            background-color: $color-dark;
+            left: 0;
+            position: absolute;
+            transition: all .6s;
+        }
+        &::after{
+            top: -8px;
+        }
+        &::before{
+            top: 8px;
+        }
+    }
+
+    &-background{
+        height: 30px;
+        width: 30px;
+        @include lg(to right, $color-primary-light, $color-primary-dark);
+        position: fixed;
+        top: 4.313rem;
+        right: 4.313rem;
+        z-index: 1;
+        border-radius: 50%;
+        transition: all .6s ease-in-out;
+    }
+
+    &-nav{
+        position: fixed;
+        top: 0;
+        left: -150%;
+        opacity: 0;
+        z-index: 1;
+        height: 100vh;
+        width: 100%;
+        @include atCenter;
+        transition: all .3s ease-in-out;
+    }
+    &-item{
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 5px;
+        @include lg(130deg, transparent 0%, transparent 50%, white 50%);
+        background-position: top left;
+        background-size: 250% 250%;
+        transition: all .3s ease-in-out;
+        a{
+            display: inline-block;
+            padding: 1.25rem 10px;
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        &:hover{
+            background-position: 100%;
+            a{
+                color: $color-primary;
+            }
+        }
+    }
+
+    &.active{
+        .navigation-icon{
+            background-color: transparent;
+            &::after{
+                top: 0;
+                transform: rotate(135deg);
+            }
+            &::before{
+                top: 0;
+                transform: rotate(-135deg);
+            }
+        }
+        .navigation-background{
+            transform: scale(200);
+        }
+        .navigation-nav{
+            left: 0;
+            width: 100vw;
+            opacity: 1;
+        }
+        .navigation-group{
+            animation: lefttoright .8s ease-in-out;
+        }
+        
+    }
+}  
+
+
+
+
+
+
+
+
+
+

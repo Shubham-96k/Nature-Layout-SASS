@@ -1,0 +1,24 @@
+.footer{
+    padding : 6rem 0;
+    background-color: $color-grey-dark1;
+
+    &-group{
+        li{
+            display: inline-block;
+            margin: 0 10px 10px 0;
+            transition: all .3s ease-in-out;
+            a{
+                color: $color-white;
+                font-weight: bold;
+                text-transform: uppercase;
+                @include lg(to right bottom, $color-primary-light, $color-primary-dark);
+                @include bgclip; 
+            }
+            &:hover{
+                scale: 1.2;
+                @include boxshadow;
+            }
+        }
+    }
+}
+

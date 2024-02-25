@@ -8,6 +8,43 @@
     <title>Travel Nature</title>
 </head>
 <body>
+ 
+    <div class="navigation"> 
+        <div class="navigation-toggle" id="navigation">
+            <span class="navigation-icon" ></span>
+        </div>
+        <div class="navigation-background"></div>
+        <div class="navigation-nav">
+            <ul class="navigation-group">
+                <li class="navigation-item">
+                    <a href="javascript:;">
+                        about us
+                    </a>
+                </li>  
+                <li class="navigation-item">
+                    <a href="javascript:;">
+                        careers
+                    </a> 
+                </li>
+                <li class="navigation-item">
+                    <a href="javascript:;">
+                        contact
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a href="javascript:;">
+                        terms
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a href="javascript:;">
+                        book now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>  
+
     <header class="header ">
         <a href="index.html" class="logo">
             <img src="./assets/images/logo-white.png" alt="logo" title="logo">
@@ -17,7 +54,7 @@
             <h2 class="header-primary-sub">is where life happens</h2>
         </div>
         <a href="javascript:;" class="btn btn-white">
-            dicover our plans
+            discover our plans
         </a>
     </header>
 
@@ -301,6 +338,21 @@
                                             <input type="text" id="email" placeholder="enter your email" class="form-control">
                                             <label for="email">email</label>
                                         </div>
+                                        <div class="form-radio-group">
+                                            <div class="form-group mb-3">
+                                                <input type="radio" name="group" id="small" class="form-radio-control">
+                                                <label for="small">
+                                                    <span class="form-custom-radio">&nbsp;</span>
+                                                    Small group tour</label>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <input type="radio" name="group" id="large" class="form-radio-control">
+                                                <label for="large">
+                                                    <span class="form-custom-radio">&nbsp;</span>
+                                                    Large group tour</label>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-green" type="submit">next step &rarr;</button>
                                     </form>
                                 </div>
                             </div>
@@ -314,9 +366,52 @@
         </div>
     </section>
 
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-3">
+                    <a href="index.html">
+                        <img src="./assets/images/logo-green-1x.png" alt="natours" title="natours">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <ul class="footer-group">
+                        <li>
+                            <a href="javascript:;">
+                                home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                contact us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                terms
+                            </a>
+                        </li>
+                    </ul>
 
+                </div>
+                <div class="col-6">
+                    <p class="text-justify text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quis vero reprehenderit fugit saepe et consequatur quibusdam. Sed reiciendis beatae delectus error doloribus commodi saepe deserunt vel dolores facere quibusdam inventore libero quis ea praesentium omnis, id exercitationem quia consequatur. Tenetur vitae maxime accusantium dignissimos ipsam suscipit debitis mollitia libero?</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
-
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>

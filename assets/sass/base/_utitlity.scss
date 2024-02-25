@@ -1,6 +1,12 @@
 .text-center{
     text-align: center;
 }
+.text-justify{
+    text-align: justify;
+}
+.text-white{
+    color: $color-white;
+}
 @media all and (max-width: 576px){
     .d-flex{
         display: flex;
@@ -17,3 +23,11 @@
     margin-bottom: 2.5rem;
 }
 
+ul{
+    list-style-type: none;
+}
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+}
